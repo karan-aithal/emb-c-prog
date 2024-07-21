@@ -21,6 +21,10 @@ int main()
         --> it will be only checking for the type
         --> it will never reflect or have ability to change the value of variable
 
+        %u -- unsigned int 
+        %lu -- unsigned long
+        %zu -- unsigned portable
+
     */
     printf("%zu\n", sizeof(int));         // 4
     printf("%zu\n", sizeof(short));       // 2

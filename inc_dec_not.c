@@ -1,5 +1,11 @@
 #include<stdio.h>
 
+//  Operators Precedence and Associativity in C
+
+
+
+
+
 int main()
 {
 int x,res,res1;
@@ -18,8 +24,20 @@ res= x++ + ++x+x++;             // no syntax error -- Output is unexpected  or U
 printf("%d\n",res);
 
 x=10;
-x=x++;  // undefined behaviour , assigning to itself
-printf("%d\n",x);   // 
+x=x++;  // undefined behaviour ,assigning to itself
+printf("%d\n",x);   
+
+x=10;
+x=++x ;  // value of x is 10 itself , undefined behaviour
+printf("%d\n",x);   
+
+int num = 100; 
+num = !!!!num; //
+num = !(++num);
+num = !(num++);
+ 
+ num = !num || num ++;
+ num = !num || !num && ++num;
 
 
 }

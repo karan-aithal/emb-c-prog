@@ -25,4 +25,15 @@ int main()
      printf("signed short is %zu bytes \n", sizeof(c3));       // 2
 
 
+     unsigned int x = 10;
+     signed int y = -1;
+     if (x>y)
+     {
+        printf("yes\n");
+        
+     }
+     else
+     printf("no\n"); // no because of rounding
+
+
 }
