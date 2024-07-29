@@ -27,7 +27,8 @@ int main()
 
      unsigned int x = 10;
      signed int y = -1;
-     if (x>y)
+     if (x>y)                 
+     // signed bit is converted to unsigned bits by using 2s compliment , precedance or ranking is higher for unsigned !!!
      {
         printf("yes\n");
         
