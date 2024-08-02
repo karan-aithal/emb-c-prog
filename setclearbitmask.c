@@ -60,4 +60,38 @@ else
 printf("clear bit\n");
 return 0;
 
+// print the bit in bit format
+for (int i = 7; i >=0; i--)
+{
+    printf("%d", (value >> i) & 1);
+    /* code */
+}
+
+int count;
+unsigned char iter = 0xFF ;
+for(count = 0; iter!=0 ; iter>>=1)
+{
+    if(iter & 01)
+    count++ ;
+}
+
+    printf ("count is %d",count);
+// Find out what a nibble is ???
+    return 0;
+/*
+• W.A.P to count set bits in a given number
+• W.A.P to print bits of given number
+• W.A.P to swap nibbles of given number
+
+*/
+
+//swap nibbles of a given number
+// make the other number 0 by & it with 0 , 
+// left shift or right shift by 4 times to swap the values 
+// Or , add the values and save as swapped nibble
+// ((value & ox0F) << 4) | ((vlaue & oxF0) >> 4)
+//   0xAB
+//   0xBA
+
+
 }
