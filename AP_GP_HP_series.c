@@ -18,7 +18,44 @@ int main()
     
     HP : In mathematics, a harmonic progression (or harmonic sequence) is a progression formed by taking the reciprocals of an arithmetic progression.
 
-
     */
+   int a , r, n;
+   int nxt;
+
+
+
+   printf("Enter the First Number 'A': ");
+   scanf("%d", &a);
+   printf("Enter the Common Difference / Ratio 'R':");
+   scanf("%d", &r);
+    printf("Enter the number of terms 'N':");
+    scanf("%d", &n);
+
+    printf("AP: %d, ",a);
+    nxt = a;
+
+    for (int i=0; i < n; i++)
+    {   
+        printf("%d, ", nxt + r);
+        nxt = nxt + r;
+    }
+
+    printf("GP: %d, ",a);
+    nxt = a;
+
+    for (int i=0; i < n; i++)
+    {   
+        printf("%d, ", nxt * r);
+        nxt = nxt * r;
+    }
+
+    printf("HP: 1/%d, ",a);
+    float nx = a;
+
+    for (int i=0; i < n; i++)
+    {   
+        printf("%f, ", 1/(nx + r));
+        nx = nx + r;
+    }
 
 }
