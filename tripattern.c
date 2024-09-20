@@ -12,7 +12,7 @@ int main()
     {   
         for(int j = 1; j <=num - i + 1 ; j++)
         {
-            if(i > 1 && j > 1 && j < num - i + 1 )
+            if(i > 1 && j > 1 && j < num - i + 1 ) // spaces 
                 printf(" ");
                 // 5-1-1 = 3
                 // 5-2-1 = 2

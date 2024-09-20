@@ -11,11 +11,20 @@
 
     printf("Enter the option to set the first day :");
     scanf("%d", &op);
-int res = 0;
-    while (n>0)
-    {   
-        res = op+n;
-        n = n - 8; // 9-7 = 2
+    int res = op;
+
+    while (n>0)    // 7 1 - Saturday ,   5 4 - Sunday  4 4 - saturday , 5 0
+    {             
+        // Error: Invalid Input, n value should be > 0 and <= 365
+        // res = op+n-1; // Add Last few days(<7) to start of weekday 5+4, 8, 5 
+        // n = n - 7; // 9-7 = 2 // 8-7 = 1 , 
+
+        int res = (op + (n % 7) - 1) % 7;  // n%7 = remaining days 
+            op + (n%7)
+        if (res > 8) // Wrap around if day exceeds Saturday (7)
+            res = 1;
+       
+        n--;  
     } 
     
     switch(res)
@@ -40,6 +49,7 @@ int res = 0;
 
         case 7: printf("It is a Saturday");
         break;
+
     }
 
  }

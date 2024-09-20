@@ -1,5 +1,14 @@
 #include<stdio.h>
-
+// If n = 5, then,
+// 5
+// 4 5
+// 3 4 5
+// 2 3 4 5
+// 1 2 3 4 5
+// 2 3 4 5
+// 3 4 5
+// 4 5
+// 5
 int main()
 {
 
@@ -21,7 +30,7 @@ int main()
 
     for (int i = 2; i <= num ; i++)  // keep 1 to repeat the numbers  1 2 3 4 5 1 2 3 4 5 in middle
     {
-        for (int j = 2; j <= num ; j++)
+        for (int j = 1; j <= num ; j++)
         {
             if (j <= num - i + 1 )    
             printf("%d ",j+i-1); // j+i-1 for starting each line with a incremented window
