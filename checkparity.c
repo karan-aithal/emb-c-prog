@@ -1,13 +1,13 @@
-#include<stdio.h>
+    #include<stdio.h>
 
-int main()
-{
-    int num,i,count=0;
-    int arr[10];  // Intialize array 
+    int main()
+    {
+        int num,i,count=0;
+        int arr[10];  // Intialize array 
 
- // LENGTH OF ARRAY 
-// variable to store size of Arr
-    int length = sizeof(arr) / sizeof(arr[0]);
+    // LENGTH OF ARRAY 
+    // variable to store size of Arr
+        int length = sizeof(arr) / sizeof(arr[0]);
 // variable to store the size of Arr
     // int length = *(&arr + 1) - arr;
 
@@ -25,12 +25,14 @@ Step 3: Repeat the step 2 until number is greater than 0
     {
         while(num > 0)
         {
-            arr[i] = num % 2;  // divivde by 2 and store remainder to convert decimal to binary
+            arr[i] = num % 2;    // Remainder 
+            // divivde by 2 and store remainder to convert decimal to binary
             
             if(arr[i])  // check if bit is 1 or 0 and count the 1s
             count++;
 
-            num = num / 2;  // divide  until remainder is zero
+            num = num / 2;    // Next number
+            // divide  until remainder is zero
         }
     }
 
