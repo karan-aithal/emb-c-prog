@@ -7,7 +7,7 @@
 // R is the right pointer.
 // int *r;
 
-void quickSort(int arr[], int first, int last)
+void quickSort(int arr[], int first, int last)    // Divide and conquer - Large Datasets
 {
     int i, j, pivot, temp;
 

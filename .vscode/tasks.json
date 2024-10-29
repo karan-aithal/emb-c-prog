@@ -2,43 +2,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build C Program",
-            "type": "cppvsdbg",
-            "command": "gcc",
+            "label": "Build Active File",
+            "type": "shell",
+            "command": "bash",
             "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+                "-c", 
+                "if [[ ${fileExtname} == \".c\" ]]; then clang -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\"; else clang++ -g \"${file}\" -o \"${fileDirname}/${fileBasenameNoExtension}\"; fi"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "detail": "Generated task"
-        },
-        {
-            "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\MinGW\\bin\\gcc.exe",
-            "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe"
-            ],
-            "options": {
-                "cwd": "${fileDirname}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "compiler: C:\\MinGW\\bin\\gcc.exe"
+            "problemMatcher": ["$gcc"],
+            "detail": "Build the active file using the correct compiler"
         }
     ]
 }
